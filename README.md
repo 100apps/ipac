@@ -39,7 +39,7 @@ ipac并不是像[goagent](https://github.com/goagent/goagent)那样是一个代�
 所以其实只支持两个参数，`socks`和`proxy`，后面跟的是`ip:port`。如果什么参数也不加，就返回(template.pac中定义的)默认代理`SOCKS 127.0.0.1:7070`，当然如果是自己运行的`ipac`，可以直接编辑`template.pac`修改。
 
 ##想添加自定义规则怎么办？
-需要自己运行`ipac.js`，修改`template.pac`文件的`myHosts`变量，只能追加使用代理的host。
+需要自己运行`ipac.js`，修改`template.pac`文件的`myHosts`变量，默认是追加hosts，可以通过`-host`来从gfwlist中减去某个host，比如`"-v2ex.com"`则对于gfwlist中的v2ex.com不用代理。
 
 ##chrome浏览器怎么使用
 我可以负责任的告诉你，可以用！但是具体怎么用，请自行Google：`Chrome pac文件`，`Android pac文件`，`ie pac文件`等。
