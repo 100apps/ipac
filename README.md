@@ -47,6 +47,11 @@ ipac并不是像[goagent](https://github.com/goagent/goagent)那样是一个代�
 ##我的服务器上运行了其他webserver，还可以跑ipac吗？
 当然可以！ipac默认监听的是55555端口，比如你用nginx监听80端口，那么配置一个nginx的反向代理到127.0.0.1:5555即可。具体规则请Google：`nginx 反向代理`，`apache反向代理`等。
 
+##现在这么多pac生成项目，你再弄一个有什么意义？
+pac服务器，首先要保证能直接访问，不被墙。所以一个pac地址一旦出名，就会被墙，不如开源一个pac服务器，大家自建。可以用我们提供的，也可以自己本机搞一个，或者放在墙内的服务器上。
+
+另外，如果你想分享自己的pac服务器，欢迎push过来。
+
 --------------
 One More Thing
 
@@ -70,3 +75,7 @@ One More Thing, NO Kidding
 
 ##楼主我看了你的代码，感觉你的js写得很烂
 楼主是专职做iOS(Objective-C)开发的，javascript还处于学习阶段，写得不好，请见谅。但是，你想，好歹，这个东西它跑起来了！👏
+
+##目前可用的ipac服务器地址：
+1. https://poiuy.me/
+2. 欢迎添加
