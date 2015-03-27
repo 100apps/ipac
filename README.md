@@ -5,7 +5,7 @@ hi, 墙内的人！
 
 ipac根据[autoproxy2pac](http://autoproxy2pac.appspot.com/)的最新规则生成pac文件，适用于各种平台（pc／mac／iPhone等支持PAC自动代理的系统），这样我们就可以「自动翻墙」了。
 
-ipac是一个web server，类似于<http://autoproxy2pac.appspot.com/>，可以根据参数生成pac文件，但是昨天（2015-03－26）我使用的时候这个网站已经不能生成pac文件了，幸好还有一个[gfwtest.js](http://autoproxy2pac.appspot.com/gfwtest.js)可以访问，所以`ipac`就是根据这个js文件生成pac格式文件的开源程序。
+ipac是一个web server，类似于<http://autoproxy2pac.appspot.com/>，可以根据参数生成pac文件，但是昨天（2015-03-26）我使用的时候这个网站已经不能生成pac文件了，幸好还有一个[gfwtest.js](http://autoproxy2pac.appspot.com/gfwtest.js)可以访问，所以`ipac`就是根据这个js文件生成pac格式文件的开源程序。
 
 ipac并不是像[goagent](https://github.com/goagent/goagent)那样是一个代理软件，他只是一个规则，告诉系统(浏览器)什么时候用代理(翻墙)，什么时候不用。如果你想翻墙，代理软件还是需要的。
 
