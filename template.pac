@@ -36,7 +36,7 @@ if(myHosts&&myHosts.length)
 var hostsObj={};
 for(var i=0;i<hosts.length;i++){
 	hostsObj[hosts[i]]=true;
-	hosts[i]="*."+hosts[i];
+	hosts[i]="."+hosts[i];
 }
 
 function FindProxyForURL(url, host) {
@@ -44,7 +44,7 @@ function FindProxyForURL(url, host) {
 	host = host.toLowerCase();
 	if(hostsObj[host])return px;
 	for(var i=0;i<hosts.length;i++){
-		if (shExpMatch(host, hosts[i]))
+		if(host.substr(host.length-hosts[i].length)==hosts[i])
 			return px;
 	}
 	return "DIRECT";
