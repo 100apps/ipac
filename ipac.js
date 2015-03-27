@@ -4,7 +4,7 @@ var http = require('http');
 var fs = require('fs');
 var ipac = {
 	port: process.argv.length>2&&parseInt(process.argv[2])?parseInt(process.argv[2]):55555,//服务器端口号
-	useCloudflareHttps: false, //可以根据自己的情况修改。是否使用cloudflare并强制使用https
+	useCloudflareHttps: true, //可以根据自己的情况修改。是否使用cloudflare并强制使用https
 	hostsStr: "",
 	lastUpdateTime: 0,
 	count: 0,
