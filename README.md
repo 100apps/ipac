@@ -60,6 +60,8 @@ ipac.js是用[nodejs](https://nodejs.org)写的，所以你要想运行ipac.js�
 --------------
 One More Thing, NO Kidding
 
-#不越狱的iPhone也能用ssh翻墙
+##不越狱的iPhone也能用ssh翻墙
 我们首先下载一个ssh软件，配置-D参数，比如7070，那么iPhone的127.0.0.1:7070就是一个socks代理了。此时填入自动代理规则地址`https://poiuy.me/`就可以了。但是默认情况下，大约10分钟iPhone上的ssh客户端就会停止，需要手动掉到前台。
 
+##poiuy.me这个域名好奇怪啊
+都是为了输入方便。poiuy是iPhone（或其他手机设备）字母键盘最上面一行，从右向左的前5个字母😄，所以输入一次就记住了。
