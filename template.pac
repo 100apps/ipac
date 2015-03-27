@@ -1,8 +1,7 @@
 /******默认代理和自定义规则可以在下面两行中配置：******/
 var px=typeof _px !="undefined"&&_px?_px:"SOCKS 127.0.0.1:7070; DIRECT";//自定义默认proxy：1. http代理->PROXY host:port 2. socks代理-> SOCKS host:port
-var myHosts=[];//自定义规则.放在一个数组里。比如["a.com","b.com"]
-var encodedHosts=typeof _encodedHosts !="undefined"?_encodedHosts:"";
-
+var myHosts=["-v2ex.com"];//自定义规则.放在一个数组里。比如["a.com","b.com","-v2ex.com"]默认是append，如果以减号"-"开头就是从gfwlist中删除
+var encodedHosts=typeof _encodedHosts !="undefined"?_encodedHosts:"W10=";
 function decode64(_1) {
 	var _2 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
 	var _3 = "";
@@ -29,10 +28,33 @@ function decode64(_1) {
 	return _3;
 }
 var hosts=eval(decode64(encodedHosts));
-if(myHosts&&myHosts.length)
-	for(var i=0;i<myHosts.length;i++)
-		hosts.push(myHosts[i]);
 
+//处理自定义规则
+if(myHosts&&myHosts.length){
+	var removeHosts=[];
+	for(var i=0;i<myHosts.length;i++){
+		if(myHosts[i].charAt(0)!='-')
+			hosts.push(myHosts[i]);
+		else
+			removeHosts.push(myHosts[i].substr(1));
+	}
+	if(removeHosts.length){
+		var tempHosts=[];
+		for(var i=0;i<hosts.length;i++){
+			var inRemovedHosts=false;
+			for(var j=0;j<removeHosts.length;j++){
+				if(removeHosts[j]==hosts[i]){
+					inRemovedHosts=true;
+					break;
+				}
+			}
+			if(!inRemovedHosts)
+				tempHosts.push(hosts[i]);
+		}
+		hosts=tempHosts;
+	}
+}
+	
 var hostsObj={};
 for(var i=0;i<hosts.length;i++){
 	hostsObj[hosts[i]]=true;
