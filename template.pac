@@ -1,6 +1,6 @@
 /******默认代理和自定义规则可以在下面两行中配置：******/
 var px=typeof _px !="undefined"&&_px?_px:"SOCKS 127.0.0.1:7070; DIRECT";//自定义默认proxy：1. http代理->PROXY host:port 2. socks代理-> SOCKS host:port
-var myHosts=[];//自定义规则.放在一个数组里。比如["a.com","b.com"]
+var myHosts=["google.com","google.com.hk"];//自定义规则.放在一个数组里。比如["a.com","b.com"]
 var encodedHosts=typeof _encodedHosts !="undefined"?_encodedHosts:"";
 
 function decode64(_1) {
