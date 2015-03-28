@@ -73,12 +73,13 @@ var ipac = {
 			if (ipac.useCloudflareHttps) {
 				if (!req.headers.hasOwnProperty("cf-visitor")) {
 					res.writeHead(301, {
-						'Location': ': https://www.baidu.com/'
+						'Location': 'https://www.baidu.com/'
 					});
+					res.end();
 					return;
 				} else if (req.headers["cf-visitor"].indexOf("https") == -1) {
 					res.writeHead(301, {
-						'Location': ': https://' + req.headers["host"] + req.url
+						'Location': 'https://' + req.headers["host"] + req.url
 					});
 					res.end();
 					return;
@@ -92,7 +93,7 @@ var ipac = {
 			if (url.substr(0, 6) == "/socks") px = "SOCKS " + url.substr(6) + "; DIRECT";
 			if (url.substr(0, 6) == "/proxy") px = "PROXY " + url.substr(6) + "; DIRECT";
 			res.writeHead(200, {
-				'Content-Type': 'application/x-ns-proxy-autoconfig'
+				'Content-Type': 'application/x-ns-proxy-autoconfig; charset=utf-8'
 			});
 			if (px) {
 				res.write("var _px='" + px + "';\n");
