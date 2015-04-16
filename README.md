@@ -1,4 +1,6 @@
 # ipac
+
+[![Join the chat at https://gitter.im/100apps/ipac](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/100apps/ipac?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 hi, 墙内的人！
 
 首先了解什么是PAC文件：<http://zh.wikipedia.org/zh/代理自动配置>
