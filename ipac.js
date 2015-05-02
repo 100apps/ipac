@@ -90,7 +90,7 @@ var ipac = {
 			ipac.reload(); //reload
 			var url = req.url.toLowerCase();
 			var px = "";
-			if (url.substr(0, 6) == "/socks") px = "SOCKS " + url.substr(6) + "; DIRECT";
+			if (url.substr(0, 6) == "/socks") px = "SOCKS5 " + url.substr(6) + "; SOCKS "+url.substr(6) +"; DIRECT";
 			if (url.substr(0, 6) == "/proxy") px = "PROXY " + url.substr(6) + "; DIRECT";
 			res.writeHead(200, {
 				'Content-Type': 'application/x-ns-proxy-autoconfig; charset=utf-8'
