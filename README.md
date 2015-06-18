@@ -86,7 +86,7 @@ One More Thing, NO Kidding
 
 ##目前可用的ipac服务器地址：
 1. https://poiuy.me/
-2. http://ipac-612be.coding.io/
+2. http://ipac.coding.io/
 3. 欢迎添加
 
 ##support
