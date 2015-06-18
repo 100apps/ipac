@@ -86,7 +86,8 @@ One More Thing, NO Kidding
 
 ##目前可用的ipac服务器地址：
 1. https://poiuy.me/
-2. 欢迎添加
+2. http://ipac-612be.coding.io/
+3. 欢迎添加
 
 ##support
 - [![Join the chat at https://gitter.im/100apps/ipac](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/100apps/ipac?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
