@@ -1,6 +1,6 @@
 /******默认代理和自定义规则可以在下面两行中配置：******/
 var px=typeof _px !="undefined"&&_px?_px:"SOCKS 127.0.0.1:7070; DIRECT";//自定义默认proxy：1. http代理->PROXY host:port 2. socks代理-> SOCKS host:port
-var myHosts=["xda-developers.com","fastly.net","cdn.sstatic.net","google.com","google.com.hk","blogspot.com"];//自定义规则.放在一个数组里。比如["a.com","b.com","-v2ex.com"]默认是append，如果以减号"-"开头就是从gfwlist中删除
+var myHosts=["githubusercontent.com","assets-cdn.github.com","xda-developers.com","fastly.net","cdn.sstatic.net","google.com","stripe.com","google.com.hk","cdn.infoqstatic.com","blogspot.com"];//自定义规则.放在一个数组里。比如["a.com","b.com","-v2ex.com"]默认是append，如果以减号"-"开头就是从gfwlist中删除
 var encodedHosts=typeof _encodedHosts !="undefined"?_encodedHosts:"W10=";
 function decode64(_1) {
 	var _2 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
